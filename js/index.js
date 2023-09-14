@@ -1,4 +1,6 @@
 const slides = document.querySelectorAll(".mySlides");
+const slidesTwo = document.querySelectorAll(".price_item");
+const prices = document.querySelector(".prices");
 const btnUno = document.querySelector(".btn-one")
 const btnDos = document.querySelector(".btn-two")
 const prueba2 = document.querySelector(".prices")
@@ -43,8 +45,9 @@ btnUno.addEventListener("click", () => {
 
 btnDos.addEventListener("click", () => {
     console.log("Diste click en el boton 2")
+    prices.style.display = 'grid'
     toggleFullScreen()
-    showContent()
+    showSlidesTwo()
     // showContent(false)
 });
 
@@ -86,5 +89,22 @@ function showSlides() {
     // Establecer el nuevo setTimeout y almacenar su ID
     setTimeout(showSlides, 1000); // Cambiar imagen cada 5 segundos
 }
-
+function showSlidesTwo() {
+    // function showSlides(isFirstPart) {
+        // var currentContainer; 
+        // if(isFirstPart){ currentContainer = 'slides' } else {currentContainer = 'galery'}
+        for (let i = 0; i < slidesTwo.length; i++) {
+            slidesTwo[i].style.display = "none";
+        }
+        slideIndex++;
+        // console.log('Dentro show' + slideIndex);
+        if (slideIndex > slidesTwo.length) {
+            slideIndex = 1;
+        }
+        slidesTwo[slideIndex - 1].style.display = "block";
+        // clearTimeout(timeoutID);
+    
+        // Establecer el nuevo setTimeout y almacenar su ID
+        setTimeout(showSlidesTwo, 1000); // Cambiar imagen cada 5 segundos
+    }
 // showContent(true)
