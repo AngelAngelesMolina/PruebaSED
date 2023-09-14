@@ -1,47 +1,155 @@
+/* GENERAL SETTINGS */
 body {
     margin: 0;
-    overflow: hidden;
 }
 
-.main-section{
-    display: block;
+h2 {
+    text-align: center;
+    font-size: 40px;
 }
 
-.show-element{
-    display: block;
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
-.hide-element{
-    display: none;
+footer a{
+    text-decoration: none;
+    color: #4F709C;
+    font-weight: 700;
+}
+footer a:hover{
+    color: #6623e2;
+}
+
+@media only screen and (min-width: 600px) {
+    footer {
+        width: 1200px;
+        padding: 30px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+/* CARDS */
+.cards {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+    .cards {
+        flex-direction: row;
+        max-width: 1000px;
+    }
+}
+
+.card {
+    margin: 30px;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: auto;
+    height: 250px;
+    max-width: 420px;
+    box-shadow: 12px 8px 21px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 12px 8px 21px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 12px 8px 21px 2px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    font-family: sans-serif;
+}
+
+.card_title {
+    font-size: 24px;
+    padding: 10px 10px 0 10px;
+}
+
+.card_body {
+    padding: 10px;
+}
+
+
+.card a {
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    padding: 10px;
+    background-color: #4F709C;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+.card a:hover {
+    cursor: pointer;
+    background-color: #213555;
+
 }
 
 .center-content {
     text-align: center;
 }
 
-.slideshow-container {
+
+/* FIRST EXAMPLE */
+.slideshow-container,
+.prices {
     position: relative;
     width: 100%;
     height: 100vh;
-    /* Ocupa toda la pantalla */
+    display: none;
 }
 
 .mySlides {
     display: none;
     width: 100%;
     height: 100%;
-    /* 100% de la altura de la pantalla */
 }
 
-.btn-two {
-    font-size: 24px;
-    padding: 5px;
-    background-color: aqua;
-    border-radius: 10px;
-}
+/* SECOND EXAMPLE */
 
-.btn-two:hover {
-    cursor: pointer;
-}
-.second-part{
+.prices {
     display: none;
+    grid-template-columns: 60% 40%;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100vh;
+}
+
+.producto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.products-information {
+    background-color: #ad4444;
+    /* padding: 10px; */
+}
+
+.precios {
+    margin: 30px;
+    padding: 10px;
+    border-top: 2px solid rgb(245, 236, 245);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
