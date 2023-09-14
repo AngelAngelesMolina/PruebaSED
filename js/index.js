@@ -1,23 +1,35 @@
 const slides = document.querySelectorAll(".mySlides");
 const btnUno = document.querySelector(".btn-one")
 const btnDos = document.querySelector(".btn-two")
-const prueba2 = document.querySelector(".second-part")
+const prueba2 = document.querySelector(".prices")
 const mainContent = document.querySelector('main')
+const slideContainer = document.querySelector('.slideshow-container')
 // const mainContent = document.querySelector('.main-section')
 let slideIndex = 0;
-console.log(mainContent.classList);
+// console.log(mainContent.classList);
 
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
 
-});
+// });
+// document.addEventListener('keydown', function (event) {
+//     if (event.key === 'Escape') {
+//         // Tu código aquí: esta función se ejecutará cuando se presione la tecla "Esc".
+//         console.log('La tecla "Esc" fue presionada.');
+//         mainContent.classList.remove('hide-element')
+//         mainContent.classList.add('show-element')
+
+//     }
+// });
 btnUno.addEventListener("click", () => {
+    slideContainer.style.display = 'block'
     toggleFullScreen();
-    showSlides(); // Iniciar el slideshow
+    showSlides();
     console.log(slideIndex);
 })
 
 btnDos.addEventListener("click", () => {
-    window.alert("Diste click en el boton 2")
+    // window.alert("Diste click en el boton 2")
+    toggleFullScreen()
     showContent()
 });
 
@@ -27,18 +39,15 @@ function toggleFullScreen() {
         document.documentElement.requestFullscreen();
         mainContent.classList.add('hide-element')
     } else {
-        // document.exitFullscreen()
         if (document.exitFullscreen) {
             document.exitFullscreen();
-            mainContent.classList.remove('hide-element')
-            mainContent.classList.add('show-element')
         }
-        // mainContent.style.display = 'block'
     }
 }
 
 function showContent() {
-    prueba2.style.display = "block"
+    prueba2.style.display = 'block'
+
 }
 
 function showSlides() {
