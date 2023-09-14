@@ -59,7 +59,7 @@ function showSlides() {
     }
     slides[slideIndex - 1].style.display = "block";
 
-    setTimeout(showSlides, 5000);
+    setTimeout(showSlides, 500);
 }
 
 function showSlidesTwo() {
@@ -72,7 +72,7 @@ function showSlidesTwo() {
     }
     slidesTwo[slideIndex - 1].style.display = "block";
     // GETTING DATA
-    fetch('/js/data/lista.json')
+    fetch('./js/data/lista.json')
         .then(response => response.json())
         .then(data => {
             const { limpieza } = data;
@@ -111,6 +111,6 @@ function showSlidesTwo() {
         .catch(error => {
             console.error('Error al cargar el archivo JSON:', error);
         });
-    setTimeout(showSlidesTwo, 5000);
+    setTimeout(showSlidesTwo, 500);
 }
 
