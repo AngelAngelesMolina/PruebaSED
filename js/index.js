@@ -59,7 +59,7 @@ function showSlides() {
     }
     slides[slideIndex - 1].style.display = "block";
 
-    setTimeout(showSlides, 500);
+    setTimeout(showSlides, 5000);
 }
 
 function showSlidesTwo() {
@@ -111,6 +111,6 @@ function showSlidesTwo() {
         .catch(error => {
             console.error('Error al cargar el archivo JSON:', error);
         });
-    setTimeout(showSlidesTwo, 500);
+    setTimeout(showSlidesTwo, 5000);
 }
 
